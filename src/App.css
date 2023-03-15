@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+header h1 {
+  margin: 10px;
+}
+
+main {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+}
+
+main .overall {
+  width: 100%;
+
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.overall .summaryStats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overall span {
+  color: blue;
+}
