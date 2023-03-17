@@ -1,0 +1,15 @@
+.regionCard {
+  height: 100px;
+  background-color: aquamarine;
+
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.regionCard h2 {
+  font-size: 18px;
+}
+
+.regionCard span {
+  color: blue;
+}

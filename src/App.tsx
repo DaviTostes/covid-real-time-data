@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
+import RegionCard from './components/regionCard'
 import getData from './utils/getData'
 
 function App() {
-  const [data, setData] = useState({ summaryStats: [], lastUpdated: '', rawData: []})
+  const [data, setData] = useState<any>({ summaryStats: [], lastUpdated: '', rawData: []})
 
   useEffect(() => {
     const awaitData = async () => {
@@ -29,8 +30,19 @@ function App() {
             <p>Last Updated: <span>{data.lastUpdated}</span></p>
           </div>
         </div>
-        <div className="rawData">
-          
+        <div className="container">
+          <div className="rawData">          
+            {
+              data.rawData.map((region: any, index: any) => 
+              <RegionCard 
+                key={index}
+                region={region.Combined_Key} 
+                confirmed={region.Confirmed} 
+                deaths={region.Deaths}
+                lastUpdate={region.Last_Update}
+              />)
+            }
+          </div>
         </div>
       </main>
     </div>
